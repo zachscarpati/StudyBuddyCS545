@@ -1,0 +1,103 @@
+[
+    {
+        "img": "literature1.PNG",
+        "options": [
+            "Ron Weasley",
+            "Hermonie Granger",
+            "Neville Longbottom",
+            "Professor Snape"
+        ],
+        "answer": "Hermonie Granger"
+    },
+    {
+        "img": "literature2.PNG",
+        "options": [
+            "red/white stripped top hat",
+            "pirate hat",
+            "chef's hat",
+            "bandana"
+        ],
+        "answer": "red/white stripped top hat"
+    },
+    {
+        "img": "literature3.PNG",
+        "options": [
+            "Bob Jones",
+            "Mr. McGee",
+            "the man with the cool pants",
+            "the man in the yellow hat"
+        ],
+        "answer": "the man in the yellow hat"
+    },
+    {
+        "img": "literature4.PNG",
+        "options": [
+            "Lucy",
+            "Wendy",
+            "Melissa",
+            "Catherine"
+        ],
+        "answer": "Wendy"
+    },
+    {
+        "img": "literature5.PNG",
+        "options": [
+            "Jerry",
+            "Huckleberry Finn",
+            "Shadowrealm James",
+            "Lydia"
+        ],
+        "answer": "Huckleberry Finn"
+    },
+    {
+        "img": "literature6.PNG",
+        "options": [
+            "E. B. White",
+            "John Green",
+            "C. S. Lewis",
+            "Ronald Dahl"
+        ],
+        "answer": "E. B. White"
+    },
+    {
+        "img": "literature7.PNG",
+        "options": [
+            "her sister",
+            "her father",
+            "her mother",
+            "her dog"
+        ],
+        "answer": "her mother"
+    },
+    {
+        "img": "literature8.PNG",
+        "options": [
+            "Cat in the Hat",
+            "Alice Through the Looking Glass",
+            "Alice in Wonderland",
+            "James and the Giant Peach"
+        ],
+        "answer": "Alice Through the Looking Glass"
+    },
+    {
+        "img": "literature9.PNG",
+        "options": [
+            "Ronald Dahl",
+            "Dr. Suess",
+            "Stephen King",
+            "John Green"
+        ],
+        "answer": "Ronald Dahl"
+    },
+    {
+        "img": "literature10.PNG",
+        "options": [
+            "Moby",
+            "SSMoney",
+            "Lucifer",
+            "The Pequod"
+        ],
+        "answer": "The Pequod"
+    }
+    
+]

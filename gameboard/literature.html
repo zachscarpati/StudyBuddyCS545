@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>StudyBuddy</title>
+    <link rel="icon"
+        href="https://img.freepik.com/premium-vector/concept-stack-book-school-stuff-with-globe-magnifying-glass-isolated-white-cartoon-illustration-study-material-school-university-textbook_106293-210.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+
+<body onload="newGame('literature')">
+    <a class="back" href="/index.html">Home</a>
+    <div class="level">
+        <h1 id="header">Please answer the question:</h1>
+        <div class="problem">
+            <img id="problem" src="" />
+        </div>
+        <div class="buttons">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <p class="notification"></p>
+        </div>
+        <button class="hidden" id="next" onclick="levelNext('literature')">Next question</button>
+        <div class="result">
+            <h1 class="score">Final score: <span></span> / 6</h1>
+            <button class="again" onclick="window.location.reload();">Play again?</button>
+        </div>
+        
+    </div>
+
+    <script src="/src/js/logic.js"></script>
+
+</body>
+
+</html>
