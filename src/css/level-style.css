@@ -42,12 +42,23 @@ a:active {
     background-color: lightgrey;
 }
 
-h1 {
+.level h1 {
     font-family: Verdana;
-    font-size: 50px;
+    font-size: 25px;
     text-align: center;
     font-weight: bold;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
 }
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+}
+
 
 
 .again {
@@ -86,8 +97,8 @@ h1 {
     height: 105vh;
 }
 
-button {
-    background-color: lightgreen;
+.button {
+    background: lightgreen;
     font-family: Verdana;
     font-size: 40px;
     text-decoration: none;
