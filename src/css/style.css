@@ -40,72 +40,10 @@ body {
     padding: 5px 10px 5px 10px;
 }
 
-/* Popup container */
-.popup {
-    left: 150px;
-    position: absolute;
-    display: inline-block;
-    cursor: pointer;
-}
 
-/* The actual popup (appears on top) */
-.popup .popuptext {
-    visibility: hidden;
-    width: 300px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 2;
-    bottom: -300%;
-    left: 50%;
-    margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: -100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 /* Float the link section to the right */
-.header-right {
+.rightHeader {
     float: left;
     padding-left: 20px;
     position: absolute;
@@ -124,7 +62,7 @@ body {
     border-radius: 20px;
 }
 
-.game-board {
+.gameboards {
     z-index: 1;
     display: flex;
     flex-direction: row;
@@ -147,7 +85,7 @@ body {
     justify-content: center;
 }
 
-.world-images {
+.section-img {
     width: 250px;
     height: 250px;
     border: 5px solid white;
@@ -158,11 +96,11 @@ body {
     box-shadow: 10px 10px 5px lightblue;
 }
 
-.world-images:hover {
+.section-img:hover {
     box-shadow: 20px 20px 5px lightblue;
 }
 
-.projTxt {
+.proj {
     height: 4rem;
     display: flex;
     align-items: center;
@@ -170,7 +108,7 @@ body {
     color: #ffffff;
 }
 
-.projName {
+.name {
     font-size: 2.0rem;
 }
 

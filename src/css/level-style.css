@@ -67,7 +67,7 @@ h1 {
     left: 50vw;
 }
 
-#flag-image {
+#problem {
     width: 450px;
     height: 300px;
     border: 10px solid rgb(0, 0, 0);
@@ -80,7 +80,7 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-.button-container {
+.buttons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,7 +145,7 @@ button.showright {
     transform: translateX(-50%);
 }
 
-.notification-message {
+.notification {
     margin: auto 1rem;
     padding: .5rem 1rem;
     background: black;
@@ -156,7 +156,7 @@ button.showright {
     display: none;
 }
 
-.notification-message.notify {
+.notification.notify {
     display: block;
 }
 
