@@ -5,19 +5,18 @@ body {
     overflow-y: hidden;
 }
 
-/* Style the header with a grey background and some padding 
 .footer {
     overflow: hidden;
     background-color: #ffffff;
     padding: 20px 10px;
     display: inline-flex;
     flex-direction: row;
-}*/
+}
 
 /* Style the header links */
 .footer a {
     color: #000000;
-    margin-bottom: 20%;
+    margin-bottom: 50%;
     margin-left: 50%;
     padding: 4px;
     text-decoration: none;
