@@ -3,8 +3,8 @@ let correct = 0;
 let number = 6;
 let counter = 0;
 
-let problem = documnet.querySelector('.problem');
-let problemImg = document.querySelector('.problem img');
+let problem = documnet.querySelector('.prob');
+let problemImg = document.querySelector('.prob img');
 let pOptions = document.querySelector('.buttons');
 let pArray = document.querySelector('.buttons button');
 let notification = document.querySelector('.buttons p.notification');
