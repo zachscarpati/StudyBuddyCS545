@@ -58,14 +58,15 @@ a:active {
 .quiz h2 {
     font-size: 18px;
     font-family: sans-serif;
+    text-align: center;
 }
 
-.ans-buttons {
-    background: #fff;
-    color: #222;
+.button {
+    background: #222;
+    color: #fff;
     font-weight: 500;
     width: 100%;
-    border: 1px solid #222;
+    border: 1px solid #fff;
     padding: 10px;
     margin: 10px 0;
     text-align: left;
@@ -74,12 +75,12 @@ a:active {
     transition: all 0.3s;
 }
 
-.ans-buttons:hover:not([disabled]) {
+.button:hover:not([disabled]) {
     background: #222;
     color: #fff;
 }
 
-.ans-buttons:disabled {
+.button:disabled {
     cursor: no-drop;
 }
 
