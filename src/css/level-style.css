@@ -57,119 +57,49 @@ a:active {
 
 .quiz h2 {
     font-size: 18px;
+    font-family: sans-serif;
 }
 
-
-
-.again {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.result {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50vh;
-    transform: translate(-50%, -50%);
-    left: 50vw;
-}
-
-#problem {
-    width: 450px;
-    height: 300px;
-    border: 10px solid rgb(0, 0, 0);
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-
-}
-
-.buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 105vh;
-}
-
-.button {
-    background: lightgreen;
-    font-family: Verdana;
-    font-size: 40px;
-    text-decoration: none;
-    display: inline-block;
-    border: 5px solid black;
+.ans-buttons {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
     padding: 10px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px lightblue;
-    margin-right: 20px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-button:hover {
-    background-color: lightgrey;
-    box-shadow: 10px 10px 5px lightblue;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+.ans-buttons:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
 }
 
-a:focus {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+.ans-buttons:disabled {
+    cursor: no-drop;
 }
 
-a:active {
-    text-decoration: none;
-    color: rgb(0, 0, 0)
-}
-
-button.selected {
-    background-color: lightgray;
-}
-
-button.right {
-    background-color: green;
-}
-
-button.wrong {
-    background-color: red;
-}
-
-button.showright {
-    background-color: green;
-}
-
-.hidden {
+#next-button {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
     display: none;
 }
 
-#next {
-    position: absolute;
-    bottom: 20px;
-    left: 50vw;
-    transform: translateX(-50%);
+.correct {
+    background: green;
 }
 
-.notification {
-    margin: auto 1rem;
-    padding: .5rem 1rem;
-    background: black;
-    color: white;
-    border-radius: .25rem;
-    position: inherit;
-    right: 25%;
-    display: none;
+.incorrect {
+    background: red;
 }
-
-.notification.notify {
-    display: block;
-}
-
-/* TODO: Add breakpoints for 400px, 800px, 1200px, 1600px */
-/* @media only screen and (min-width: 1200px) {} */
-/* Max width, min width, display */
