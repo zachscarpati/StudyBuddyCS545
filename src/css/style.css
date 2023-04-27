@@ -26,6 +26,13 @@ body {
     border-radius: 4px;
 }
 
+.title {
+    justify-content: center;
+    background-color: yellow;
+    color: green;
+    float: inline-start;
+}
+
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .icon {
     float: left;
