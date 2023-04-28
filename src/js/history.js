@@ -27,7 +27,7 @@ const questions = [
     {
         question: "Who paitned the roof of the Sistine Chapel?",
         answers: ["Sandro Boticelli", "Leonardo da Vinci", "Michelangelo", "Raphael"],
-        correctIDX: 1
+        correctIDX: 2
     },
     {
         question: "Who wrote the famous diary while hiding from Nazis in Amsterdam?",
