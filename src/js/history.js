@@ -6,7 +6,7 @@ const questions = [
             {text: "Larry Telephone", correct:false},
             {text: "Senator Satellite", correct:false},
             {text: "Jerry", correct:false},
-        ]
+        ],
     },
     {
         question: "Who was America's first president?",
@@ -15,7 +15,7 @@ const questions = [
             {text: "George Washington", correct:true},
             {text: "Ben Franklin", correct:false},
             {text: "Alexander Hamilton", correct:false},
-        ]
+        ],
     },
     {
         question: "Who gifted America the Statue of Liberty?",
@@ -24,7 +24,7 @@ const questions = [
             {text: "Germany", correct:false},
             {text: "England", correct:false},
             {text: "France", correct:true},
-        ]
+        ],
     },
     {
         question: "What year did women recieve the right to vote in America?",
@@ -33,7 +33,7 @@ const questions = [
             {text: "1920", correct:true},
             {text: "1923", correct:false},
             {text: "1964", correct:false},
-        ]
+        ],
     },
     {
         question: "Who invented the light bulb?",
@@ -42,7 +42,7 @@ const questions = [
             {text: "Ben Franklin", correct:false},
             {text: "Albert Einstein", correct:false},
             {text: "Larry Lightbulb", correct:false},
-        ]
+        ],
     },
     {
         question: "Who paitned the roof of the Sistine Chapel?",
@@ -51,7 +51,7 @@ const questions = [
             {text: "Leonardo da Vinci", correct:false},
             {text: "Michelangelo", correct:true},
             {text: "Raphael", correct:false},
-        ]
+        ],
     },
     {
         question: "Who wrote the famous diary while hiding from Nazis in Amsterdam?",
@@ -60,8 +60,8 @@ const questions = [
             {text: "Helen Keller", correct:false},
             {text: "Jackie Kennedy", correct:false},
             {text: "Amelia Earhart", correct:false},
-        ]
-    }
+        ],
+    },
 ];
 
 const questionElement = document.getElementById("question");
@@ -69,8 +69,10 @@ const answerButton = document.getElementById("ans-buttons");
 const nextButton = document.getElementById("next-button");
 
 
-let currQuestionIDX = 0;
+let currentIDX = 0;
 let score = 0;
+
+startQuiz()
 
 function startQuiz() {
     currQuestionIDX = 0;
@@ -144,6 +146,4 @@ nextButton.addEventListener("click", () => {
     } else {
         startQuiz();
     }
-})
-
-startQuiz();
+});
