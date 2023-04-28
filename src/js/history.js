@@ -80,7 +80,7 @@ function startQuiz() {
 }
 
 function resetState() {
-    nextButton.style.display = "none";
+    nextButton.classList.add('hide');
     while(answerButton.firstChild) {
         answerButton.removeChild(answerButton.firstChild);
     }
@@ -101,7 +101,7 @@ function selectAnswer() {
         }
         button.disabled = true;
     });
-    nextButton.style.display = "block";
+    nextButton.classList.remove('hide')
 }
 
 function showQuestions() {
@@ -118,7 +118,7 @@ function showQuestions() {
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
-        button.addEventListener("click", selectAnswer)
+        button.addEventListener("click", selectAnswer())
     });
 }
 
