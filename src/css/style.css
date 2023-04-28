@@ -17,7 +17,8 @@ body {
 /* Style the header links */
 .footer a {
     color: #000000;
-    margin-left: 50%;
+    margin-bottom: 50%;
+    margin-left: 45%;
     padding: 4px;
     text-decoration: none;
     font-size: 20px;
@@ -92,11 +93,11 @@ body {
     justify-content: center;
     box-shadow: 10px 10px 5px lightblue;
 }
-
+/*
 .section-img:hover {
     box-shadow: 20px 20px 5px lightblue;
 }
-
+*/
 .proj {
     height: 4rem;
     display: flex;
