@@ -1,149 +1,87 @@
 const questions = [
     {
         question: "Who invented the telephone?",
-        answers: [
-            {text: "Alexander Graham Bell", correct:true},
-            {text: "Larry Telephone", correct:false},
-            {text: "Senator Satellite", correct:false},
-            {text: "Jerry", correct:false},
-        ],
+        answers: ["Alexander Graham Bell", "Larry Telephone", "Senator Satellite", "Jerry"],
+        correctIDX: 0
     },
     {
         question: "Who was America's first president?",
-        answers: [
-            {text: "Thomas Jefferson", correct:false},
-            {text: "George Washington", correct:true},
-            {text: "Ben Franklin", correct:false},
-            {text: "Alexander Hamilton", correct:false},
-        ],
+        answers: ["Thomas Jefferson", "George Washington", "Ben Franklin", "Alexander Hamilton"],
+        correctIDX: 1
     },
     {
         question: "Who gifted America the Statue of Liberty?",
-        answers: [
-            {text: "Spain", correct:false},
-            {text: "Germany", correct:false},
-            {text: "England", correct:false},
-            {text: "France", correct:true},
-        ],
+        answers: ["Spain", "Germany", "England", "France"],
+        correctIDX: 3
     },
     {
         question: "What year did women recieve the right to vote in America?",
-        answers: [
-            {text: "1938", correct:false},
-            {text: "1920", correct:true},
-            {text: "1923", correct:false},
-            {text: "1964", correct:false},
-        ],
+        answers: ["1938", "1920", "1923", "1964"],
+        correctIDX: 1
     },
     {
         question: "Who invented the light bulb?",
-        answers: [
-            {text: "Thomas Edison", correct:true},
-            {text: "Ben Franklin", correct:false},
-            {text: "Albert Einstein", correct:false},
-            {text: "Larry Lightbulb", correct:false},
-        ],
+        answers: ["Thomas Edison", "Ben Franklin", "Albert Einstein", "Larry Lightbulb"],
+        correctIDX: 0
     },
     {
         question: "Who paitned the roof of the Sistine Chapel?",
-        answers: [
-            {text: "Sandro Boticelli", correct:false},
-            {text: "Leonardo da Vinci", correct:false},
-            {text: "Michelangelo", correct:true},
-            {text: "Raphael", correct:false},
-        ],
+        answers: ["Sandro Boticelli", "Leonardo da Vinci", "Michelangelo", "Raphael"],
+        correctIDX: 1
     },
     {
         question: "Who wrote the famous diary while hiding from Nazis in Amsterdam?",
-        answers: [
-            {text: "Anne Frank", correct:true},
-            {text: "Helen Keller", correct:false},
-            {text: "Jackie Kennedy", correct:false},
-            {text: "Amelia Earhart", correct:false},
-        ],
+        answers: ["Anne Frank", "Helen Keller", "Jackie Kennedy", "Amelia Earhart"],
+        correctIDX: 0
     },
 ];
 
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("ans-buttons");
+const answerButtons = document.getElementById("ans-buttons");
 const nextButton = document.getElementById("next-button");
 
 
 let currentIDX = 0;
 let score = 0;
 
-startQuiz()
-
-function startQuiz() {
-    currQuestionIDX = 0;
-    score = 0;
-    nextButton.innerHTML = "Next";
-    showQuestions();
-}
-
-function resetState() {
-    nextButton.classList.add('hide');
-    while(answerButton.firstChild) {
-        answerButton.removeChild(answerButton.firstChild);
+function loadQuestion() {
+    questionElement.innerText = questions[currentIDX].question;
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
     }
+    questions[currentIDX].answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.innerText = answer;
+        button.classList.add("button");
+        button.addEventListener("click", () => {
+            selectAnswer(index);
+        });
+        answerButtons.appendChild(button);
+    });
+    nextButton.disabled = true;
 }
 
-function selectAnswer() {
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct === "true";
-    if (correct) {
-        selectedButton.classList.add("correct");
+function selectAnswer(index) {
+    if (index === questions[currentIDX].correctIDX) {
         score++;
-    } else {
-        selectedButton.classList.add("incorrect");
     }
-    Array.from(answerButton.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct");
-        }
+    answerButtons.childNodes.forEach((button) => {
         button.disabled = true;
     });
-    nextButton.classList.remove('hide')
+    nextButton.disabled = false;
 }
 
-function showQuestions() {
-    resetState();
-    let currentQuestion = questions[currQuestionIDX]
-    let questionNum = currQuestionIDX+1;
-    questionElement.innerHTML = questionNum+ ". " + currentQuestion.question;
-
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("button");
-        answerButton.appendChild(button);
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        }
-        button.addEventListener("click", selectAnswer())
-    });
-}
-
-function handleNextButton() {
-    currQuestionIDX++;
-    if (currQuestionIDX < questions.length) {
-        showQuestions();
+function nextQuestion() {
+    currentIDX++;
+    if (currentIDX < questions.length) {
+        loadQuestion();
     } else {
-        showScore();
+        questionElement.innerText = `You scored ${score} out of ${questions.length}!`;
+        answerButtons.style.display = "none";
+        nextButton.style.display = "none";
     }
 }
 
-function showScore() {
-    resetState();
-    questionElement.innerHTML = `Your score is ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "Play again";
-    nextButton.style.display = "block";
-}
+window.onload = loadQuestion;
 
-nextButton.addEventListener("click", () => {
-    if(currQuestionIDX < questions.length) {
-        handleNextButton();
-    } else {
-        startQuiz();
-    }
-});
+nextButton.addEventListener("click", nextQuestion);
