@@ -44,44 +44,62 @@ const nextButton = document.getElementById("next-button");
 let currentIDX = 0;
 let score = 0;
 
-function loadQuestion() {
-    questionElement.innerText = questions[currentIDX].question;
-    while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
-    }
-    questions[currentIDX].answers.forEach((answer, index) => {
+function loadQuestion(question) {
+    questionElement.innerText = question.question;
+    answerButtons.innerHTML = "";
+    question.answers.forEach((answer, index) => {
         const button = document.createElement("button");
         button.innerText = answer;
         button.classList.add("button");
         button.addEventListener("click", () => {
-            selectAnswer(index);
+            if (index === question.correctIDX) {
+                button.classList.add("correct");
+                score++;
+            } else {
+                button.classList.add("incorrect");
+            }
+            disableButtons();
         });
         answerButtons.appendChild(button);
     });
-    nextButton.disabled = true;
 }
 
-function selectAnswer(index) {
-    if (index === questions[currentIDX].correctIDX) {
-        score++;
-    }
-    answerButtons.childNodes.forEach((button) => {
+function disableButtons() {
+    const buttons = answerButtons.querySelectorAll("button");
+    buttons.forEach((button) => {
         button.disabled = true;
+        if (!button.classList.contains("correct") && !button.classList.contains("incorrect")) {
+            button.classList.add("disabled");
+        }
     });
-    nextButton.disabled = false;
 }
 
-function nextQuestion() {
+function enableButtons() {
+    const buttons = answerButtons.querySelectorAll("button");
+    buttons.forEach((button) => {
+        button.disabled = false;
+        button.classList.remove("correct");
+        button.classList.remove("incorrect");
+        button.classList.remove("disabled");
+    });
+}
+
+function loadNext() {
     currentIDX++;
     if (currentIDX < questions.length) {
-        loadQuestion();
+        loadQuestion(questions[currentIDX]);
+        enableButtons();
     } else {
-        questionElement.innerText = `You scored ${score} out of ${questions.length}!`;
-        answerButtons.style.display = "none";
-        nextButton.style.display = "none";
+        showResults();
     }
 }
 
-window.onload = loadQuestion;
+function showResults() {
+    questionElement.innerText = `You got ${score} out of ${questions.length} questions correct!`;
+    answerButtons.innerHTML = "";
+    nextButton.style.display = "none";
+}
 
-nextButton.addEventListener("click", nextQuestion);
+loadQuestion(questions[currentIDX]);
+
+nextButton.addEventListener("click", loadNext);
