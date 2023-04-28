@@ -1,38 +1,38 @@
 const questions = [
     {
-        question: "Who is Harry Potter's best female friend?",
-        answers: ["Ron Weasley", "Hermoine Granger", "Neville Longbottom", "Professor Snape"],
+        question: "All animals require food, air, and _____ to survive.",
+        answers: ["candy", "water", "soda", "grass"],
         correctIDX: 1
     },
     {
-        question: "What kind of hat does the cat wear in the Dr. Seuss book the Cat in the Hat?",
-        answers: ["red/white striped hat", "pirate hat", "chef's hat", "bandana"],
+        question: "What is the Earth's only natural satellite?",
+        answers: ["Moon", "Venus", "Mars", "Sun"],
         correctIDX: 0
     },
     {
-        question: "In the book Curious George, who is the monkey's companion?",
-        answers: ["Bob Jones", "Mr. McGee", "the man with the cool pants", "the man in the yellow hat"],
+        question: "What is a baby cow called?",
+        answers: ["kitten", "child", "lamb", "calf"],
         correctIDX: 3
     },
     {
-        question: "What is the name of the Darling's daughter in Peter Pan?",
-        answers: ["Lucy", "Melissa", "Wendy", "Catherine"],
+        question: "What part of the skeletal system protects the brain?",
+        answers: ["foot", "glute", "skull", "forearm"],
         correctIDX: 2
     },
     {
-        question: "What is the name of Tom Sawyer's best friend in The Adventures of Tom Sawyer?",
-        answers: ["Jerry", "Huckleberry Finn", "Shadowrealm James", "Lydia"],
-        correctIDX: 1
-    },
-    {
-        question: "In the book Freaky Friday, Annabel changes bodies with whom?",
-        answers: ["her sister", "her father", "her mother", "her dog"],
+        question: "What neutrient plays an essential role in muscle building?",
+        answers: ["carbohydrate", "fat", "protein", "iron"],
         correctIDX: 2
     },
     {
-        question: "Which author wrote James and the Giant Peach?",
-        answers: ["Ronald Dahl", "Dr. Seuss", "Stephen King", "John Green"],
+        question: "What is the largest animal on Earth?",
+        answers: ["elephant", "blue whale", "human", "seagull"],
         correctIDX: 0
+    },
+    {
+        question: "The closest planet to the Sun is _______.",
+        answers: ["Venus", "Mercury", "Mars", "Saturn"],
+        correctIDX: 1
     },
 ];
 

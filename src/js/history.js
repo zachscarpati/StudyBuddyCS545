@@ -99,25 +99,6 @@ function showResults() {
     questionElement.innerText = `You got ${score} out of ${questions.length} questions correct!`;
     answerButtons.innerHTML = "";
     nextButton.style.display = "none";
-  
-    const resultElem = document.createElement('div');
-    resultElem.classList.add('result-container');
-    for (let i = 0; i < quiz.length; i++) {
-        const question = quiz[i];
-        const isCorrect = userAnswers[i] === question.correctIDX;
-        const result = document.createElement('div');
-        result.classList.add('result');
-        result.innerHTML = `<p>${question.question}</p>
-            <p>Your answer: ${question.answers[userAnswers[i]]}</p>
-            <p>Correct answer: ${question.answers[question.correctIDX]}</p>
-            <p>${isCorrect ? 'Correct!' : 'Incorrect'}</p>`;
-        if (!isCorrect) {
-            const correctAnsElem = result.querySelector(`p:nth-child(3)`);
-            correctAnsElem.classList.add('correct-answer');
-        }
-        resultElem.appendChild(result);
-    }
-    document.getElementById('container').appendChild(resultElem);
 }
 
 loadQuestion(questions[currentIDX]);

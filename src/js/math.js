@@ -1,38 +1,38 @@
 const questions = [
     {
-        question: "Who is Harry Potter's best female friend?",
-        answers: ["Ron Weasley", "Hermoine Granger", "Neville Longbottom", "Professor Snape"],
+        question: "7 * 9 =",
+        answers: ["72", "63", "69", "48"],
         correctIDX: 1
     },
     {
-        question: "What kind of hat does the cat wear in the Dr. Seuss book the Cat in the Hat?",
-        answers: ["red/white striped hat", "pirate hat", "chef's hat", "bandana"],
-        correctIDX: 0
-    },
-    {
-        question: "In the book Curious George, who is the monkey's companion?",
-        answers: ["Bob Jones", "Mr. McGee", "the man with the cool pants", "the man in the yellow hat"],
+        question: "6 * 12 =",
+        answers: ["36", "74", "18", "72"],
         correctIDX: 3
     },
     {
-        question: "What is the name of the Darling's daughter in Peter Pan?",
-        answers: ["Lucy", "Melissa", "Wendy", "Catherine"],
-        correctIDX: 2
-    },
-    {
-        question: "What is the name of Tom Sawyer's best friend in The Adventures of Tom Sawyer?",
-        answers: ["Jerry", "Huckleberry Finn", "Shadowrealm James", "Lydia"],
+        question: "81 / 9 =",
+        answers: ["5", "9", "8", "12"],
         correctIDX: 1
     },
     {
-        question: "In the book Freaky Friday, Annabel changes bodies with whom?",
-        answers: ["her sister", "her father", "her mother", "her dog"],
+        question: "Solve for x: 2x + 3 = 9",
+        answers: ["x = 5", "x = 1", "x = 3", "x = 4"],
         correctIDX: 2
     },
     {
-        question: "Which author wrote James and the Giant Peach?",
-        answers: ["Ronald Dahl", "Dr. Seuss", "Stephen King", "John Green"],
+        question: "Solve for x: 5x - 27 = 3",
+        answers: ["x = 6", "x = 12", "x = 7", "x = 3"],
         correctIDX: 0
+    },
+    {
+        question: "If I have 12 apples, I give 3 to John, 5 apples to Mary, but Gilbert gives me 10 apples. How many apples do I have?",
+        answers: ["14 apples", "12 apples", "8 apples", "18 apples"],
+        correctIDX: 0
+    },
+    {
+        question: "I have $80 to spend at the mall, I bought two shirts for $12 each, a new pair of shoes for $40, and a soft pretzel for $5. How much money do I have left?",
+        answers: ["$17", "$5", "$11", "$9"],
+        correctIDX: 2
     },
 ];
 
