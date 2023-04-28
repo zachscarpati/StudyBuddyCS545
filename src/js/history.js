@@ -58,12 +58,12 @@ function loadQuestion(question) {
             } else {
                 button.classList.add("incorrect");
             }
-            //disableButtons();
+            disableButtons();
         });
         answerButtons.appendChild(button);
     });
 }
-/*
+
 function disableButtons() {
     const buttons = answerButtons.querySelectorAll("button");
     buttons.forEach((button) => {
@@ -83,12 +83,12 @@ function enableButtons() {
         button.classList.remove("disabled");
     });
 }
-*/
+
 function loadNext() {
     currentIDX++;
     if (currentIDX < questions.length) {
         loadQuestion(questions[currentIDX]);
-        //enableButtons();
+        enableButtons();
     } else {
         showResults();
     }

@@ -3,18 +3,11 @@ body {
     min-height: 200px;
     overflow-x: hidden;
     overflow-y: hidden;
+    color: rgb(247, 132, 132);
 }
 
-/* Style the header with a grey background and some padding 
-.footer {
-    overflow: hidden;
-    background-color: #ffffff;
-    padding: 20px 10px;
-    display: inline-flex;
-    flex-direction: row;
-}*/
 
-/* Style the header links */
+/* Style links */
 .footer a {
     color: #000000;
     margin-bottom: 50%;
@@ -29,10 +22,10 @@ body {
 .title {
     margin-left: 50%;
     margin-top: 10%;
-    color: green;
+    color: yellow;
 }
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+
 .icon {
     float: left;
     width: 100px;
@@ -45,8 +38,6 @@ body {
     color: black;
     padding: 5px 10px 5px 10px;
 }
-
-
 
 
 .select-game {
@@ -93,11 +84,11 @@ body {
     justify-content: center;
     box-shadow: 10px 10px 5px lightblue;
 }
-/*
+
 .section-img:hover {
     box-shadow: 20px 20px 5px lightblue;
 }
-*/
+
 .proj {
     height: 4rem;
     display: flex;
@@ -125,6 +116,3 @@ a:hover {
 a:active {
     text-decoration: none;
 }
-
-
-/* TODO: Add breakpoints for 400px, 800px, 1200px, 1600px */
