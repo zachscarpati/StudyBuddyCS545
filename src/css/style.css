@@ -47,8 +47,8 @@ body {
     font-size: 24px;
     font-family: Verdana;
     background-color: #999999;
-    color: white;
-    border: 5px solid white;
+    color: rgb(247, 132, 132);
+    border: 5px solid rgb(39, 38, 38);
     border-radius: 20px;
 }
 
@@ -64,7 +64,7 @@ body {
 
 .game {
     float: left;
-    background: rgb(255, 255, 255);
+    background: rgb(247, 132, 132);
     width: 25%;
     height: 280px;
     padding: 15px;

@@ -1,4 +1,8 @@
 
+body {
+  background-color: rgb(241, 241, 140);
+}
+
 
 .back {
     background-color: rgb(0, 183, 255);
@@ -70,7 +74,7 @@ a {
   }
   
 .next-button:hover {
-    background-color: #d60b0b;
+    background-color: #00f7ff;
   }
   
   /* Styles specific to the quiz program */
