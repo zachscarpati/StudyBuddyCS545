@@ -54,9 +54,11 @@ function loadQuestion(question) {
         button.addEventListener("click", () => {
             if (index === question.correctIDX) {
                 button.classList.add("correct");
+                playCorrect();
                 score++;
             } else {
                 button.classList.add("incorrect");
+                playIncorrect();
             }
             disableButtons();
         });
@@ -92,6 +94,18 @@ function loadNext() {
     } else {
         showResults();
     }
+}
+
+function playCorrect() {
+    const audio = document.getElementById("correct");
+    audio.currentTime = 0;
+    audio.play();
+}
+
+function playIncorrect() {
+    const audio = document.getElementById("incorrect");
+    audio.currentTime = 0;
+    audio.play();
 }
 
 
