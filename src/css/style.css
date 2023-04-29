@@ -3,7 +3,7 @@ body {
     min-height: 200px;
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color: rgb(107, 106, 106);
+    background-color: rgb(206, 206, 206);
 }
 
 
@@ -47,7 +47,7 @@ body {
     font-size: 24px;
     font-family: Verdana;
     background-color: #999999;
-    color: rgb(107, 106, 106);
+    color: rgb(206, 206, 206);
     border: 5px solid rgb(39, 38, 38);
     border-radius: 20px;
 }
@@ -64,7 +64,7 @@ body {
 
 .game {
     float: left;
-    background: rgb(107, 106, 106);
+    background: rgb(206, 206, 206);
     width: 25%;
     height: 280px;
     padding: 15px;
